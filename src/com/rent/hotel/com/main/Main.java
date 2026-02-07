@@ -18,7 +18,17 @@ public class Main {
 		int n = ler.nextInt(); 
 		
 		for(int i = 0; i < n;i++) {
-			
+			System.out.printf("Aluguel #{%d}\n", (i+1));
+			System.out.print("Nome: ");
+			String name = ler.nextLine();
+			System.out.print("Email: ");
+			String email = ler.nextLine();
+			System.out.print("Quarto: ");
+			int quarto = ler.nextInt();
+			if (rooms[quarto] == null)
+			{
+			    rooms[quarto] = new Student(name,email);
+			}
 		}
 		
 		
