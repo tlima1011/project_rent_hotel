@@ -27,22 +27,23 @@ public class Main {
 			System.out.print("Quarto: ");
 			int quarto = ler.nextInt();
 			ler.nextLine();
-			// while(rooms[quarto] != null) {
+			//System.out.println(rooms[quarto]);
+			//while (rooms[quarto] != null) {
 			if (rooms[quarto] != null) {
 				System.out.println("Quarto já ocupado");
 			} else {
 				rooms[quarto] = new Student(name, email);
 			}
-			// }
+			//}
 //			if (rooms[quarto] == null)
 //			{
 //			    
 //			}
 			System.out.println();
 		}
-		
-		Student s = new Student(); 		
-		s.relatorio(rooms); 
+
+		Student s = new Student();
+		s.relatorio(rooms);
 		ler.close();
 	}
 }
