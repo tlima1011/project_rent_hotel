@@ -31,6 +31,17 @@ public class Main {
 			}
 		}
 		
+		System.out.println("Quartos Ocupados");
+		for(int i = 0; i < rooms.length; i++)
+		{
+		    if (rooms[i] != null)
+		    {
+		    		System.out.printf("%d: %.2f", i, rooms[i]);
+		    }
+		}
+		
+		
+		
 		
 		ler.close();
 	}
