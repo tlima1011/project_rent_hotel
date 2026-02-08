@@ -16,33 +16,33 @@ public class Main {
 		
 		System.out.print("Quantos quartos serão alugados? ");
 		int n = ler.nextInt(); 
+		ler.nextLine(); 
 		
 		for(int i = 0; i < n;i++) {
-			System.out.printf("Aluguel #{%d}\n", (i+1));
+			System.out.printf("Aluguel #%d\n", (i+1));
 			System.out.print("Nome: ");
 			String name = ler.nextLine();
 			System.out.print("Email: ");
 			String email = ler.nextLine();
 			System.out.print("Quarto: ");
 			int quarto = ler.nextInt();
-			if (rooms[quarto] == null)
+			ler.nextLine(); 
+			if (rooms[i] == null)
 			{
 			    rooms[quarto] = new Student(name,email);
 			}
+			System.out.println();
 		}
 		
-		System.out.println("Quartos Ocupados");
+		System.out.println("\nQuartos Ocupados");
 		for(int i = 0; i < rooms.length; i++)
 		{
 		    if (rooms[i] != null)
 		    {
-		    		System.out.printf("%d: %.2f", i, rooms[i]);
+		    		System.out.println(i + ": "+rooms[i]);
 		    }
 		}
-		
-		
-		
-		
+			
 		ler.close();
 	}
 }
