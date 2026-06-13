@@ -13,10 +13,14 @@ public class Main {
 		Scanner ler = new Scanner(System.in);
 
 		Student[] rooms = new Student[10];
-
-		System.out.print("Quantos quartos serão alugados? ");
-		int n = ler.nextInt();
-		ler.nextLine();
+		int quarto = 0, n = 0; 
+		try {
+			System.out.print("Quantos quartos serão alugados? ");
+			n = ler.nextInt();
+			ler.nextLine();
+		}catch(java.util.InputMismatchException e) {
+			System.out.println("Tipo de dado informado incorreto para quarto");
+		}
 
 		for (int i = 0; i < n; i++) {
 			System.out.printf("Aluguel #%d\n", (i + 1));
@@ -24,21 +28,18 @@ public class Main {
 			String name = ler.nextLine();
 			System.out.print("Email: ");
 			String email = ler.nextLine();
-			System.out.print("Quarto: ");
-			int quarto = ler.nextInt();
-			ler.nextLine();
-			//System.out.println(rooms[quarto]);
-			//while (rooms[quarto] != null) {
+			try {
+				System.out.print("Quarto: ");
+				quarto = ler.nextInt();
+				ler.nextLine();
+			}catch(java.util.InputMismatchException e) {
+				System.out.println("Tipo de dado informado incorreto para quarto");
+			}
 			if (rooms[quarto] != null) {
 				System.out.println("Quarto já ocupado");
 			} else {
 				rooms[quarto] = new Student(name, email);
 			}
-			//}
-//			if (rooms[quarto] == null)
-//			{
-//			    
-//			}
 			System.out.println();
 		}
 
